@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Whitney Museum of American Art</title>
+		<meta name="description" content="Loading Effects for Grid Items with CSS Animations" />
+		<meta name="keywords" content="css animation, loading effect, google plus, grid items, masonry" />
+		<meta name="author" content="Alex Law" />
+		<link rel="shortcut icon" href="../favicon.ico"> 
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<script src="js/modernizr.custom.js"></script>
+		<script src='https://api.mapbox.com/mapbox-gl-js/v0.37.0/mapbox-gl.js'></script>
+		<link href='https://api.mapbox.com/mapbox-gl-js/v0.37.0/mapbox-gl.css' rel='stylesheet' />
+	</head>
+	<body class="clearfix">
+
+		<div class="container">
+			<!-- Top Navigation -->
+			<div class="small-top clearfix">
+				<a class="codrops-icon codrops-icon-prev" href="index.html"><span>Home</span></a>
+				<span class="right"><a href="moma.html">Next Museum</a><a class="codrops-icon codrops-icon-drop" href="http://whitney.org/" target="_blank"><span>Museum Website</span></a></span>
+			</div>
+
+			<header>
+				<h1>Whitney Museum of American Art</h1>	
+
+				
+	<div class="dropdown-container">
+
+		<button class="accordion">INFORMATION</button>
+		<div class="panel">
+		  <p>As the preeminent institution devoted to the art of the United States, the Whitney Museum of American Art presents the full range of twentieth-century and contemporary American art, with a special focus on works by living artists. The Whitney is dedicated to collecting, preserving, interpreting, and exhibiting American art, and its collection—arguably the finest holding of twentieth-century American art in the world—is the Museum's key resource. The Museum's signature exhibition, the Biennial, is the country's leading survey of the most recent developments in American art. </p>
+
+		</div>
+
+		<button class="accordion">HOURS</button>
+		<div class="panel">
+		  <p>
+		  	<ul>Monday | 10:30AM–6PM</ul>
+			<ul>Tuesday | Closed </ul>
+			<ul>Wednesday | 10:30AM–6PM</ul>
+			<ul>Thursday | 10:30AM–6PM</ul>
+			<ul>Friday | 10:30AM–10PM</ul>
+			<ul>Saturday | 10:30AM–10PM</ul>
+			<ul>Sunday | 10:30AM–6PM</ul>
+			</p>
+		</div>
+
+		<button class="accordion">TICKETS</button>
+		<div class="panel">
+		  <p>General Admission tickets provide entry to all exhibitions, including the 2017 Biennial (March 17–June 11). Tickets may be purchased online until midnight the night before your visit and are discounted ($22 adults; $17 seniors and students). There are no additional fees. You may arrive up to thirty minutes after the time you select, and stay as long as you like. For groups of ten or more, submit a request.</p>
+		</div>
+
+		<button class="accordion">EXHIBITS</button>
+		<div class="panel">
+		  <p>Where We Are: Selections From The Whitney’s Collection, 1900–1960 Apr 28, 2017–</p>
+		  <p> Whitney Biennial 2017 Mar 17–Jun 11, 2017</p>
+ 		  <p>Fast Forward: Painting From The 1980s Jan 27–May 14, 2017</p>
+		  <p>Sibyl Kempson: 12 Shouts To The Ten Forgotten Heavens
+			every Solstice And Equinox Through 2018 Next: June 21 2017</p>
+		</div>
+
+		<button class="accordion">CONTACT</button>
+		<div class="panel">
+		  <ul>Whitney Museum of American Art</ul>
+				 <ul>99 Gansevoort Street</ul>
+				 <ul>New York, NY 10014</ul>
+				 <ul>(212) 570-3600</ul>
+				 <ul>info@whitney.org</ul>
+		</div>
+	</div>
+
+
+			</header>
+			</div>
+
+			<div class="map-container">
+
+				<div id='map' style='width: 100%; height: 620px'></div>
+				<!--
+				<div id='map' style='width: 100%; height: 620px; position: relative; top: -120px; z-index: -1;'></div>-->
+		<script>
+			mapboxgl.accessToken = 'pk.eyJ1IjoiYWxhdzE1IiwiYSI6ImNqMjg5eHFmeTAwaXkyd3FxeTB4eGgyd2kifQ.ra43HkrsIIGr4H-yBdUVWg';
+				var map = new mapboxgl.Map({
+    			container: 'map',
+    			style: 'mapbox://styles/alaw15/cj28dpqiw00032rqjju73v202'});
+		</script>
+		</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].onclick = function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  }
+}
+</script>
+
+
+
+
+
+		<script src="js/masonry.pkgd.min.js"></script>
+		<script src="js/imagesloaded.js"></script>
+		<script src="js/classie.js"></script>
+		<script src="js/AnimOnScroll.js"></script>
+		<script>
+			new AnimOnScroll( document.getElementById( 'grid' ), {
+				minDuration : 0.4,
+				maxDuration : 0.7,
+				viewportFactor : 0.2
+			} );
+		</script>
+	</body>
+</html>

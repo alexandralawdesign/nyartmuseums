@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>NYC Art Museums</title>
+		<meta name="description" content="Loading Effects for Grid Items with CSS Animations" />
+		<meta name="keywords" content="css animation, loading effect, google plus, grid items, masonry" />
+		<meta name="author" content="Alex Law" />
+		<link rel="shortcut icon" href="../favicon.ico"> 
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<script src="js/modernizr.custom.js"></script>
+		<script src='https://api.mapbox.com/mapbox-gl-js/v0.37.0/mapbox-gl.js'></script>
+		<link href='https://api.mapbox.com/mapbox-gl-js/v0.37.0/mapbox-gl.css' rel='stylesheet' />
+	</head>
+	<body>
+
+		<div class="home-container">
+					<!-- Top Navigation -->
+			<div class="small-top clearfix">
+				<a class="codrops-icon codrops-icon-prev" href="index.html"><span>Home</span></a>
+			</div>
+			<header>
+				<h1>NEW YORK CITY | Art Museums</h1>	
+
+			</header>
+			<div class="map-container2">
+
+				<div id='map' style='width: 100%; height: 500px;'></div>
+		<script>
+			mapboxgl.accessToken = 'pk.eyJ1IjoiYWxhdzE1IiwiYSI6ImNqMjg5eHFmeTAwaXkyd3FxeTB4eGgyd2kifQ.ra43HkrsIIGr4H-yBdUVWg';
+				var map = new mapboxgl.Map({
+    			container: 'map',
+    			style: 'mapbox://styles/alaw15/cj28dpqiw00032rqjju73v202'});
+		</script>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Solomon R. Guggenheim Museum</title>
+		<meta name="description" content="Loading Effects for Grid Items with CSS Animations" />
+		<meta name="keywords" content="css animation, loading effect, google plus, grid items, masonry" />
+		<meta name="author" content="Alex Law" />
+		<link rel="shortcut icon" href="../favicon.ico"> 
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<script src="js/modernizr.custom.js"></script>
+		<script src='https://api.mapbox.com/mapbox-gl-js/v0.37.0/mapbox-gl.js'></script>
+		<link href='https://api.mapbox.com/mapbox-gl-js/v0.37.0/mapbox-gl.css' rel='stylesheet' />
+	</head>
+	<body>
+
+		<div class="container">
+			<!-- Top Navigation -->
+			<div class="small-top clearfix">
+				<a class="codrops-icon codrops-icon-prev" href="index.html"><span>Home</span></a>
+				<span class="right"><a href="newmuseum.html">Next Museum</a><a class="codrops-icon codrops-icon-drop" href="https://www.guggenheim.org/" target="_blank"><span>Museum Website</span></a></span>
+			</div>
+
+			<header>
+				<h1>Solomon R. Guggenheim Museum</h1>	
+<div class="dropdown-container">
+
+		<button class="accordion">INFORMATION</button>
+		<div class="panel">
+		  <p>An internationally renowned art museum and one of the most significant architectural icons of the 20th century, the Guggenheim Museum in New York is at once a vital cultural center, an educational institution, and the heart of an international network of museums. Visitors can experience special exhibitions of modern and contemporary art, lectures by artists and critics, performances and film screenings, classes for teens and adults, and daily tours of the galleries led by museum educators. Founded on a collection of early modern masterpieces, the Guggenheim Museum today is an ever-evolving institution devoted to the art of the 20th century and beyond.</p>
+		</div>
+
+		<button class="accordion">HOURS</button>
+		<div class="panel">
+		  <p>
+		  	<ul>Monday | 10AM–5:45PM</ul>
+			<ul>Tuesday | 10AM–5:45PM</ul>
+			<ul>Wednesday | 10AM–5:45PM</ul>
+			<ul>Thursday | Closed </ul>
+			<ul>Friday | 10AM–5:45PM</ul>
+			<ul>Saturday | 10AM–7:45PM</ul>
+			<ul>Sunday | 10AM–5:45PM</ul>
+			</p>
+		</div>
+
+		<button class="accordion">TICKETS</button>
+		<div class="panel">
+		  <p>General admission tickets include access to all exhibitions on view with the exception of Doug Wheeler:  PSAD Synthetic Desert III. Adults $25 Students and Seniors (65 years +) with valid ID $18 Children under 12 Free Members Free
+
+</p>
+		</div>
+
+		<button class="accordion">EXHIBITS</button>
+		<div class="panel">
+		  <p>Visionaries: Creating a Modern Guggenheim</p>
+		  <p>Thannhauser Collection</p>
+ 		  <p>Guggenheim Collection: Brancusi</p>
+		  <p>Jackson Pollock: Exploring Alchemy</p>
+		</div>
+
+		<button class="accordion">CONTACT</button>
+		<div class="panel">
+		  <br>Solomon R. Guggenheim Museum</br>
+				 <p>1071 Fifth Avenue</br>
+				 <br>New York, NY 10128-0173</br>
+				 <br>212 423 3500</br>
+				 <br>visitorinfo@guggenheim.org</br>
+		</div>
+	</div>
+			</header>
+			</div>
+
+			<div class="map-container">
+
+				<div id='map' style='width: 100%; height: 620px;'></div>
+		<script>
+			mapboxgl.accessToken = 'pk.eyJ1IjoiYWxhdzE1IiwiYSI6ImNqMjg5eHFmeTAwaXkyd3FxeTB4eGgyd2kifQ.ra43HkrsIIGr4H-yBdUVWg';
+				var map = new mapboxgl.Map({
+    			container: 'map',
+    			style: 'mapbox://styles/alaw15/cj28dpqiw00032rqjju73v202'});
+		</script>
+		</div>
+
+	
+
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].onclick = function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  }
+}
+</script>
+
+	<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+		<script src="js/masonry.pkgd.min.js"></script>
+		<script src="js/imagesloaded.js"></script>
+		<script src="js/classie.js"></script>
+		<script src="js/AnimOnScroll.js"></script>
+		<script>
+			new AnimOnScroll( document.getElementById( 'grid' ), {
+				minDuration : 0.4,
+				maxDuration : 0.7,
+				viewportFactor : 0.2
+			} );
+		</script>
+	</body>
+</html>

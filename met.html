@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>The Metropolitan Museum of Art</title>
+		<meta name="description" content="Loading Effects for Grid Items with CSS Animations" />
+		<meta name="keywords" content="css animation, loading effect, google plus, grid items, masonry" />
+		<meta name="author" content="Alex Law" />
+		<link rel="shortcut icon" href="../favicon.ico"> 
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<script src="js/modernizr.custom.js"></script>
+		<script src='https://api.mapbox.com/mapbox-gl-js/v0.37.0/mapbox-gl.js'></script>
+		<link href='https://api.mapbox.com/mapbox-gl-js/v0.37.0/mapbox-gl.css' rel='stylesheet' />
+	</head>
+	<body class="clearfix">
+
+		<div class="container">
+			<!-- Top Navigation -->
+			<div class="small-top clearfix">
+				<a class="codrops-icon codrops-icon-prev" href="index.html"><span>Home</span></a>
+				<span class="right"><a href="brooklyn.html">Next Museum</a><a class="codrops-icon codrops-icon-drop" href="http://www.metmuseum.org/" target="_blank"><span>Museum Website</span></a></span>
+			</div>
+
+			<header>
+				<h1>The Metropolitan Museum of Art</h1>	
+
+				
+	<div class="dropdown-container">
+
+		<button class="accordion">INFORMATION</button>
+		<div class="panel">
+		  <p>The Met presents over 5,000 years of art from around the world for everyone to experience and enjoy. The Museum lives in three iconic sites in New York City—The Met Fifth Avenue, The Met Breuer, and The Met Cloisters. Millions of people also take part in The Met experience online. Since it was founded in 1870, The Met has always aspired to be more than a treasury of rare and beautiful objects. Every day, art comes alive in the Museum's galleries and through its exhibitions and events, revealing both new ideas and unexpected connections across time and across cultures. </p>
+
+		</div>
+
+		<button class="accordion">HOURS</button>
+		<div class="panel">
+		  <p>
+		  	<ul>Monday | 10AM–5:30PM</ul>
+			<ul>Tuesday | 10AM–5:30PM </ul>
+			<ul>Wednesday | 10AM–5:30PM</ul>
+			<ul>Thursday | 10AM–5:30PM</ul>
+			<ul>Friday | 10AM–5:30PM</ul>
+			<ul>Saturday | 10AM–9PM</ul>
+			<ul>Sunday | 10AM–9PM</ul>
+			</p>
+		</div>
+
+		<button class="accordion">TICKETS</button>
+		<div class="panel">
+		  <p>Buy your tickets online now to avoid waiting in admission lines later. By buying tickets online, you agree to pay the following suggested admission prices. Adult Admission $25 Senior Admission (65+) $17 Student Admission / Valid ID  $12 Child Under 12 with Adult Free</p>
+		</div>
+
+		<button class="accordion">EXHIBITS</button>
+		<div class="panel">
+		  <p>Seurat Circus Sideshow
+		  <p>The Mysterious Landscapes of Hercules Segers</p>
+ 		  <p>Age of Empires</p>
+		  <p>The Theater of Disapperance</p>
+		</div>
+
+		<button class="accordion">CONTACT</button>
+		<div class="panel">
+		  <ul>The Metropollitan Museum of Art</ul>
+				 <ul>1000 Fifth Avenue</ul>
+				 <ul>New York, NY 10028</ul> 
+				 <ul>212-535-7710</ul>
+				 <ul>info@metmuseum.org</ul>
+		</div>
+	</div>
+
+
+			</header>
+			</div>
+
+			<div class="map-container">
+
+				<div id='map' style='width: 100%; height: 620px'></div>
+				<!--
+				<div id='map' style='width: 100%; height: 620px; position: relative; top: -120px; z-index: -1;'></div>-->
+		<script>
+			mapboxgl.accessToken = 'pk.eyJ1IjoiYWxhdzE1IiwiYSI6ImNqMjg5eHFmeTAwaXkyd3FxeTB4eGgyd2kifQ.ra43HkrsIIGr4H-yBdUVWg';
+				var map = new mapboxgl.Map({
+    			container: 'map',
+    			style: 'mapbox://styles/alaw15/cj28dpqiw00032rqjju73v202'});
+		</script>
+		</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].onclick = function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  }
+}
+</script>
+
+
+
+
+
+		<script src="js/masonry.pkgd.min.js"></script>
+		<script src="js/imagesloaded.js"></script>
+		<script src="js/classie.js"></script>
+		<script src="js/AnimOnScroll.js"></script>
+		<script>
+			new AnimOnScroll( document.getElementById( 'grid' ), {
+				minDuration : 0.4,
+				maxDuration : 0.7,
+				viewportFactor : 0.2
+			} );
+		</script>
+	</body>
+</html>

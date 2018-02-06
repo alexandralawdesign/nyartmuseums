@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>The Brooklyn Museum</title>
+		<meta name="description" content="Loading Effects for Grid Items with CSS Animations" />
+		<meta name="keywords" content="css animation, loading effect, google plus, grid items, masonry" />
+		<meta name="author" content="Alex Law" />
+		<link rel="shortcut icon" href="../favicon.ico"> 
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<script src="js/modernizr.custom.js"></script>
+		<script src='https://api.mapbox.com/mapbox-gl-js/v0.37.0/mapbox-gl.js'></script>
+		<link href='https://api.mapbox.com/mapbox-gl-js/v0.37.0/mapbox-gl.css' rel='stylesheet' />
+	</head>
+	<body class="clearfix">
+
+		<div class="container">
+			<!-- Top Navigation -->
+			<div class="small-top clearfix">
+				<a class="codrops-icon codrops-icon-prev" href="index.html"><span>Home</span></a>
+				<span class="right"><a href="mad.html">Next Museum</a><a class="codrops-icon codrops-icon-drop" href="https://www.brooklynmuseum.org/" target="_blank"><span>Museum Website</span></a></span>
+			</div>
+
+			<header>
+				<h1>The Brooklyn Museum</h1>	
+
+				
+	<div class="dropdown-container">
+
+		<button class="accordion">INFORMATION</button>
+		<div class="panel">
+		  <p>The Brooklyn Museum is one of the oldest and largest art museums in the United States. Its roots extend back to 1823 and the founding of the Brooklyn Apprentices’ Library to educate young tradesmen (Walt Whitman would later become one of its librarians). First established in Brooklyn Heights, the Library moved into rooms in the Brooklyn Lyceum building on Washington Street in 1841. Two years later, the Lyceum and the Library combined to form the Brooklyn Institute, offering important early exhibitions of painting and sculpture in addition to lectures on subjects as diverse as geology and abolitionism. The Institute announced plans to establish a permanent gallery of fine arts in 1846. </p>
+
+		</div>
+
+		<button class="accordion">HOURS</button>
+		<div class="panel">
+		  <p>
+		  	<ul>Monday | Closed </ul>
+			<ul>Tuesday | Closed </ul>
+			<ul>Wednesday | 11AM–6PM</ul>
+			<ul>Thursday | 11AM–10PM</ul>
+			<ul>Friday | 11AM–6PM</ul>
+			<ul>Saturday | 11AM–6PM</ul>
+			<ul>Sunday | 11AM–6PM</ul>
+			</p>
+		</div>
+
+		<button class="accordion">TICKETS</button>
+		<div class="panel">
+		  <p> Adults - $16 Students with valid ID - $10 Adults 62 and over - $10 Ages 19 and under - Free Members (Join us!) - Free Special ticketed exhibitions (see below)</p>
+		</div>
+
+		<button class="accordion">EXHIBITS</button>
+		<div class="panel">
+		  <p>Georgia O’Keeffe: Living Modern - MARCH 3–JULY 23, 2017</p>
+		  <p>We Wanted a Revolution: Black Radical Women, 1965–85 - APRIL 21–SEPTEMBER 17, 2017</p>
+ 		  <p>Marilyn Minter: Pretty/Dirty - NOVEMBER 4, 2016–MAY 7, 2017</p>
+		  <p>Iggy Pop Life Class by Jeremy Deller - NOVEMBER 4, 2016–JUNE 18, 2017</p>
+		</div>
+
+		<button class="accordion">CONTACT</button>
+		<div class="panel">
+		  <ul>Brooklyn Museum</ul>
+				 <ul>200 Eastern Parkway</ul>
+				 <ul>Brooklyn, New York 11238-6052</ul>
+				 <ul>718.638.5000</ul>
+				 <ul>information@brooklynmuseum.org</ul>
+		</div>
+	</div>
+
+
+			</header>
+			</div>
+
+			<div class="map-container">
+
+				<div id='map' style='width: 100%; height: 620px'></div>
+				<!--
+				<div id='map' style='width: 100%; height: 620px; position: relative; top: -120px; z-index: -1;'></div>-->
+		<script>
+			mapboxgl.accessToken = 'pk.eyJ1IjoiYWxhdzE1IiwiYSI6ImNqMjg5eHFmeTAwaXkyd3FxeTB4eGgyd2kifQ.ra43HkrsIIGr4H-yBdUVWg';
+				var map = new mapboxgl.Map({
+    			container: 'map',
+    			style: 'mapbox://styles/alaw15/cj28dpqiw00032rqjju73v202'});
+		</script>
+		</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].onclick = function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  }
+}
+</script>
+
+
+
+
+
+		<script src="js/masonry.pkgd.min.js"></script>
+		<script src="js/imagesloaded.js"></script>
+		<script src="js/classie.js"></script>
+		<script src="js/AnimOnScroll.js"></script>
+		<script>
+			new AnimOnScroll( document.getElementById( 'grid' ), {
+				minDuration : 0.4,
+				maxDuration : 0.7,
+				viewportFactor : 0.2
+			} );
+		</script>
+	</body>
+</html>
